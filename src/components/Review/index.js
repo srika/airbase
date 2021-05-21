@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 //components
+import ButtonContainer from "./components/ButtonContainer";
+import ServiceDetails from "./components/ServiceDetails";
+import ServiceHeader from "./components/ServiceHeader";
 import InfoCard from "./components/InfoCard";
 import Header from "./components/Header";
 import Divider from "../Common/Divider";
 //data
 import dataObject from "../../data";
-import ButtonContainer from "./components/ButtonContainer";
-import ServiceDetails from "./components/ServiceDetails";
 
 const Review = () => {
   const [state, setState] = useState({
@@ -62,21 +63,7 @@ const Review = () => {
     <div className="review-container">
       <Header />
       <div className="review-container__card">
-        <div className="review-container__card__header">
-          {service?.logo && (
-            <div className="review-container__card__header__logo">
-              <img
-                src={service?.logo}
-                alt={service?.name}
-                width="30px"
-                height="30px"
-              />
-            </div>
-          )}
-          <h1 className="review-container__card__header__description">
-            Request for {service?.name} (#{id})
-          </h1>
-        </div>
+        <ServiceHeader service={service} id={id} />
         <div className="review-container__card__content">
           <div className="review-container__card__content__left">
             <ServiceDetails
