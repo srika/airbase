@@ -6,7 +6,7 @@ const InfoCard = ({ data }) => {
     <div className="info-card">
       <div className="info-card__details">
         <div className="info-card__details__type mr-8">
-          <i className="fas fa-circle fa-2x fa-default"></i>
+          <i className="fas fa-circle fa-default"></i>
         </div>
         <div className="info-card__details__image mr-8">
           {data?.approver?.profile_picture && (
@@ -42,8 +42,8 @@ const InfoCard = ({ data }) => {
         <i
           className={`${
             data?.status === "accepted"
-              ? "fas fa-check-circle fa-2x fa-green"
-              : "far fa-circle fa-2x fa-white"
+              ? "fas fa-check-circle fa-green"
+              : "far fa-circle fa-white"
           }`}
         ></i>
       </div>
